@@ -1537,42 +1537,45 @@
             left: auto;
             right: 25px;
         }
-        /* .design .owl-carousel .owl-nav .owl-prev,
-        .design .owl-carousel .owl-nav .owl-next {
+        
+        .bestseller .owl-carousel .owl-nav {
+            display: block;
+        }
+        
+        .bestseller .owl-carousel .owl-nav .owl-prev,
+        .bestseller .owl-carousel .owl-nav .owl-next {
             margin: 0px;
             outline: none;
             border: none;
-            background-color: transparent;
-            color: #ccc;
-            width: 50px;
-            height: 50px;
+            background-color: var(--sub);
+            color: var(--white);
+            width: 40px;
+            height: 40px;
             display: flex;
             flex-direction: row;
             justify-content: center;
             align-items: center;
-            font-size: 24px;
-            border-radius: 0;
+            font-size: 15px;
+            border-radius: 50%;
             transition: all 0.4s ease-in-out;
         }
         
-        .design .owl-carousel .owl-nav .owl-prev:hover,
-        .design .owl-carousel .owl-nav .owl-next:hover {
-            color: var(--sub);
+        .bestseller .owl-carousel .owl-nav .owl-prev:hover,
+        .bestseller .owl-carousel .owl-nav .owl-next:hover {
+            background-color: var(--main);
         }
         
-        .design .owl-carousel .owl-nav .owl-prev {
+        .bestseller .owl-carousel .owl-nav .owl-prev {
             position: absolute;
-            top: 35%;
-            transform: translateY(-50%);
-            right: -50px;
+            top: -100px;
+            left: 50px;
         }
         
-        .design .owl-carousel .owl-nav .owl-next {
+        .bestseller .owl-carousel .owl-nav .owl-next {
             position: absolute;
-            top: 35%;
-            transform: translateY(-50%);
-            left: -50px;
-        } */
+            top: -100px;
+            left: 0;
+        }
         
         .design .owl-carousel .owl-dots {
             display: flex;
@@ -2401,6 +2404,25 @@
             }
             .bestseller {
                 padding: 50px 0 40px;
+            }
+            .bestseller .owl-carousel .owl-nav .owl-prev,
+            .bestseller .owl-carousel .owl-nav .owl-next {
+                width: 35px;
+                height: 35px;
+                font-size: 15px;
+            }
+            .bestseller .owl-carousel .owl-nav .owl-prev {
+                position: absolute;
+                top: -60px;
+                left: 40px;
+            }
+            .bestseller .owl-carousel .owl-nav .owl-next {
+                position: absolute;
+                top: -60px;
+                left: 0;
+            }
+            .items-box {
+                display: none;
             }
             .testimonails {
                 padding: 40px 0;

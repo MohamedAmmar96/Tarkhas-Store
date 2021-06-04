@@ -199,11 +199,36 @@ $(document).ready(function() {
         $(".features-box .feature").removeClass("owl-carousel");
     };
 
+    if ($(window).width() >= 992) {
+        $(".make-slider").addClass("owl-carousel owl-theme");
+        $(".items-box").removeClass("owl-carousel owl-theme");
+        $('.bestseller .owl-carousel').owlCarousel({
+            loop: true,
+            autoplay: true,
+            autoplayTimeout: 4000,
+            autoplayHoverPause: true,
+            margin: 20,
+            stagePadding: 10,
+            rtl: true,
+            responsiveClass: true,
+            nav: true,
+            navText: ["<span class='fa fa-chevron-right'></span>", "<span class='fa fa-chevron-left'></span>"],
+            dots: true,
+            responsive: {
+                992: {
+                    items: 1,
+                },
+                1200: {
+                    items: 1
+                },
+            }
+        })
+    }
     if ($(window).width() <= 991) {
         $(".bestseller .sub-item").removeClass("horiz-item big-item");
         $(".items-box .sub-item").unwrap();
         // $(".items-box .col-md-4").removeClass("items-col");
-        $(".bestseller .items-box").addClass("owl-carousel owl-theme");
+        $(".items-box:first-child").addClass("owl-carousel owl-theme");
         $(".items-box .sub-item").removeClass("owl-carousel");
         $('.bestseller .owl-carousel').owlCarousel({
             loop: true,
@@ -214,7 +239,8 @@ $(document).ready(function() {
             stagePadding: 10,
             rtl: true,
             responsiveClass: true,
-            nav: false,
+            nav: true,
+            navText: ["<span class='fa fa-chevron-right'></span>", "<span class='fa fa-chevron-left'></span>"],
             dots: true,
             responsive: {
                 0: {
